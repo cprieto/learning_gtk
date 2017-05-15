@@ -24,3 +24,8 @@ target_link_libraries (sample04 ${GTK3_LIBRARIES})
 set (SAMPLE05_SOURCE ${SOURCES_DIR}/sample05.c)
 add_executable (sample05 ${SAMPLE05_SOURCE})
 target_link_libraries (sample05 ${GTK3_LIBRARIES})
+
+# The grid with next to
+set (SAMPLE06_SOURCE ${SOURCES_DIR}/sample06.c)
+add_executable (sample06 ${SAMPLE06_SOURCE})
+target_link_libraries (sample06 ${GTK3_LIBRARIES})

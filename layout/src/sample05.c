@@ -32,7 +32,7 @@ static void activate (GtkApplication *app, gpointer data) {
 }
 
 int main (int argc, char **argv) {
-    GtkApplication *application = gtk_application_new ("org.gtk.sample.layout.grid", G_APPLICATION_FLAGS_NONE);
+    GtkApplication *application = gtk_application_new ("org.gtk.sample.layout.grid2", G_APPLICATION_FLAGS_NONE);
     g_signal_connect (application, "activate", G_CALLBACK (activate), NULL);
 
     int status = g_application_run (G_APPLICATION(application), argc, argv);
