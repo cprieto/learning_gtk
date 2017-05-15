@@ -1,0 +1,19 @@
+cmake_minimum_required (VERSION 3.6)
+project (gtk_containers)
+
+find_package (PkgConfig REQUIRED)
+pkg_check_modules (GTK3 REQUIRED gtk+-3.0)
+
+set (SOURCES_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
+
+include_directories (${GTK3_INCLUDE_DIRS})
+link_directories (${GTK3_LIBRARY_DIRS})
+add_definitions (${GTK3_CFLAGS_OTHER})
+
+set (SAMPLE03_SOURCE ${SOURCES_DIR}/sample03.c)
+add_executable (sample03 ${SAMPLE03_SOURCE})
+target_link_libraries (sample03 ${GTK3_LIBRARIES})
+
+#set (BUTTON_SOURCE ${SOURCES_DIR}/basic02.c)
+#add_executable (basic_signal ${BUTTON_SOURCE})
+#target_link_libraries (basic_signal ${GTK3_LIBRARIES})
